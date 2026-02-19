@@ -1,0 +1,14 @@
+name: Github Actions Demo
+on:
+  push:
+
+jobs:
+    build:
+      runs-on: ubuntu-latest
+      steps:
+        - name: Linting
+          run: eslint --ext .jsx --fix src
+        - name: Testing
+          run: vite build
+
+
